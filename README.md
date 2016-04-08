@@ -12,6 +12,49 @@
 
 ## About
 
+Trying to manage a multi-module project over many separate repositories can be
+really difficult. Making changes across repositories is bulky and difficult to
+manage. Testing changes across many different packages when they are in separate
+locations gets really complicated really fast.
+
+To solve these problems, some projects (Babel, React, Ember, Meteor, and many
+others) use **monorepos**. The idea here is to take all the packages within a
+project and put them inside a single repo.
+
+Lerna is a tool for managing these types of repos.
+
+## Usage
+
+To start, let's install Lerna from [npm](https://www.npmjs.com/).
+
+```sh
+$ npm install --global lerna
+```
+
+Now create a new repository:
+
+```sh
+$ git init my-cool-project
+$ cd my-cool-project
+```
+
+And then to turn it into a lerna repo run the following:
+
+```sh
+$ lerna init
+```
+
+> **Note:** Depending on the project you might want to run this in
+> `--independent` mode.
+
+
+
+
+
+
+
+## About
+
 While developing [Babel](https://github.com/babel/babel) I followed a
 [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) approach
 where the entire project was split into individual packages but everything lived in the same
